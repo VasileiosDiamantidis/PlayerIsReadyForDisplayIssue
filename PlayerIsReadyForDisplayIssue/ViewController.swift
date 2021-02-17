@@ -17,10 +17,10 @@ private var playerStatusContext = 2
 class ViewController: UIViewController {
     
     /* normal stream play URL*/
-//    let link = "https://fra3-1-hls7-live.zahs.tv/HD_itv1/master.m3u8?z32=OVZWK4S7NFSD2MRVG43TONBTHETGC5LENFXV6Y3PMRSWG4Z5MFQWGLDFMFRTGJTMNQ6TCJTNNFXHEYLUMU6TSMBQEZ2GS3LFONUGSZTUHUZTMMBQEZWWC6DSMF2GKPJQEZZWSZZ5MMYTKZLFGRSTIMRRGNRGCMRSHFSGMNZSGQ4GIZTBHBQTQZJVGI2SMY3TNFSD2MJWGY2DQMKGIQ3DINBSGFBUCNJNGQYDQNRTHFBEGNRVGA3UMQRUIYTGS3TJORUWC3DSMF2GKPJQ"
+//    let link = "https://staging-hls-live.zahs.tv/HD_ard-live.m3u8?z32=MF2WI2LPL5RW6ZDFMNZT2YLBMMTGG43JMQ6TCNRWGQ4TMRRTGAZTKQSCGAYECLJSGEYUEQZTGI2DEMJWIRCTKOBZEZZWSZZ5GE3V6NJUGEYWMMBYGM3GMZJRMQ4DKMZTMYZWEM3FGEYDCNTCGZSWKYTE"
     
     /* trick play URL*/
-    let link = "https://fra3-1-hls7-live.zahs.tv/HD_itv1/t_track_trick_bw_4800_num_0_tid_5_nd_4000_mbr_5000.m3u8?z32=MNZWSZB5GE3DMNBYGFDEINRUGQZDCQ2BGUWTIMBYGYZTSQSDGY2TAN2GII2EMJTUNFWWK43INFTHIPJTGYYDAJTVONSXEX3JMQ6TENJXG43TIMZZEZ3D2MBGONUWOPJZL42DCMTFGE3DSMRUMUYTQNZTMVRTQNRZME2DSMZZME4TKN3EGA4GE"
+    let link = "https://demo-hls7-live.zahs.tv/hd/t_track_trick_bw_4800_num_0_tid_3_nd_4000_mbr_5000.m3u8?z32=ORUW2ZLTNBUWM5B5GM3DAMBGOY6TAJTTNFTT2MRRL44DANRRMI2DCOBSGM2DEZBRHFRWGYLGHBSGGNJQMRSTGZBWME4WM"
     
     var previewLayer: AVPlayerLayer?
     private var playerwIsReadyForDisplayItemObserver: NSKeyValueObservation?
@@ -73,6 +73,7 @@ class ViewController: UIViewController {
         
         valueLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 100))
         valueLabel.textAlignment = .center
+        valueLabel.backgroundColor = UIColor.white.withAlphaComponent(0.4)
         self.view.addSubview(valueLabel)
     }
     
