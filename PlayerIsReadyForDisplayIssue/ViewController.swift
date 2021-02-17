@@ -12,8 +12,11 @@ import TvOSSlider
 
 class ViewController: UIViewController {
     
+    /* normal stream play URL*/
 //    let link = "https://fra3-1-hls7-live.zahs.tv/HD_itv1/master.m3u8?z32=OVZWK4S7NFSD2MRVG43TONBTHETGC5LENFXV6Y3PMRSWG4Z5MFQWGLDFMFRTGJTMNQ6TCJTNNFXHEYLUMU6TSMBQEZ2GS3LFONUGSZTUHUZTMMBQEZWWC6DSMF2GKPJQEZZWSZZ5MMYTKZLFGRSTIMRRGNRGCMRSHFSGMNZSGQ4GIZTBHBQTQZJVGI2SMY3TNFSD2MJWGY2DQMKGIQ3DINBSGFBUCNJNGQYDQNRTHFBEGNRVGA3UMQRUIYTGS3TJORUWC3DSMF2GKPJQ"
-    let previewPlayLink = "https://fra3-1-hls7-live.zahs.tv/HD_itv1/t_track_trick_bw_4800_num_0_tid_5_nd_4000_mbr_5000.m3u8?z32=MNZWSZB5GE3DMNBYGFDEINRUGQZDCQ2BGUWTIMBYGYZTSQSDGY2TAN2GII2EMJTUNFWWK43INFTHIPJTGYYDAJTVONSXEX3JMQ6TENJXG43TIMZZEZ3D2MBGONUWOPJZL42DCMTFGE3DSMRUMUYTQNZTMVRTQNRZME2DSMZZME4TKN3EGA4GE"
+    
+    /* trick play URL*/
+    let link = "https://fra3-1-hls7-live.zahs.tv/HD_itv1/t_track_trick_bw_4800_num_0_tid_5_nd_4000_mbr_5000.m3u8?z32=MNZWSZB5GE3DMNBYGFDEINRUGQZDCQ2BGUWTIMBYGYZTSQSDGY2TAN2GII2EMJTUNFWWK43INFTHIPJTGYYDAJTVONSXEX3JMQ6TENJXG43TIMZZEZ3D2MBGONUWOPJZL42DCMTFGE3DSMRUMUYTQNZTMVRTQNRZME2DSMZZME4TKN3EGA4GE"
     
     var previewLayer: AVPlayerLayer?
     private var playerwIsReadyForDisplayItemObserver: NSKeyValueObservation?
@@ -29,7 +32,7 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        setUpPlayer(link: previewPlayLink)
+        setUpPlayer(link: link)
         addObservers()
         previewLayer?.player?.pause()
         setUpSlider()
