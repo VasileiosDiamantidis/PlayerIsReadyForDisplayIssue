@@ -17,7 +17,7 @@ private var playerStatusContext = 2
 class ViewController: UIViewController {
     
     /* normal stream play URL*/
-//    let link = "https://staging-hls-live.zahs.tv/HD_ard-live.m3u8?z32=MF2WI2LPL5RW6ZDFMNZT2YLBMMTGG43JMQ6TCNRWGQ4TMRRTGAZTKQSCGAYECLJSGEYUEQZTGI2DEMJWIRCTKOBZEZZWSZZ5GE3V6NJUGEYWMMBYGM3GMZJRMQ4DKMZTMYZWEM3FGEYDCNTCGZSWKYTE"
+//    let link = "https://demo-hls7-live.zahs.tv/hd/master.m3u8?audio_codecs=aac,eac3&minrate=900&timeshift=3600"
     
     /* trick play URL*/
     let link = "https://demo-hls7-live.zahs.tv/hd/t_track_trick_bw_4800_num_0_tid_3_nd_4000_mbr_5000.m3u8?z32=ORUW2ZLTNBUWM5B5GM3DAMBGOY6TAJTTNFTT2MRRL44DANRRMI2DCOBSGM2DEZBRHFRWGYLGHBSGGNJQMRSTGZBWME4WM"
@@ -58,7 +58,7 @@ class ViewController: UIViewController {
     
     private func addObservers() {
         playerwIsReadyForDisplayItemObserver = previewLayer?.observe(\.isReadyForDisplay, options:  [.new, .old], changeHandler: { /*[weak self]*/ player, _ in
-            print("self isReadyForDisplay value changed: \(player.isReadyForDisplay)")
+            print("playerLayer isReadyForDisplay value changed: \(player.isReadyForDisplay)")
         })
     }
     
